@@ -11,6 +11,7 @@
   /* burger */
   var burger = doc.getElementById('burger'), nav = doc.getElementById('nav');
   function setMenu(open) {
+    header.classList.toggle('menu-open', open);
     nav.classList.toggle('open', open);
     burger.setAttribute('aria-expanded', open);
     burger.setAttribute('aria-label', open ? 'Menyuni yopish' : 'Menyuni ochish');
@@ -33,6 +34,27 @@
     items.forEach(function (el, i) {
       el.style.transitionDelay = (i % 5) * 60 + 'ms';
       io.observe(el);
+    });
+  }
+
+  /* marquee: duplicate content for seamless loop */
+  var rowsEl = doc.querySelectorAll('.marquee__row');
+  if (!reduce) {
+    rowsEl.forEach(function (ul) {
+      Array.prototype.slice.call(ul.children).forEach(function (li) {
+        var c = li.cloneNode(true); c.setAttribute('aria-hidden', 'true'); ul.appendChild(c);
+      });
+    });
+  }
+
+  /* card cursor glow */
+  if (!reduce && window.matchMedia('(hover: hover)').matches) {
+    doc.querySelectorAll('.card').forEach(function (c) {
+      c.addEventListener('mousemove', function (e) {
+        var r = c.getBoundingClientRect();
+        c.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
     });
   }
 
