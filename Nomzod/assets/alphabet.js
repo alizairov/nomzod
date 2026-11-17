@@ -48,9 +48,8 @@
       attrOrig.set(el, rec);
     });
     document.title = mode === 'new' ? toNew(titleOrig) : titleOrig;
-    document.querySelectorAll('.alph__btn').forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b.getAttribute('data-alph') === mode));
-    });
+    var sw = document.getElementById('alph');
+    if (sw) sw.setAttribute('aria-checked', String(mode === 'new'));
     document.documentElement.setAttribute('data-alifbo', mode);
   }
   var titleOrig = document.title;
@@ -65,12 +64,11 @@
   });
   function run() { mo.disconnect(); apply(); mo.observe(document.body, OPTS); }
 
-  document.querySelectorAll('.alph__btn').forEach(function (b) {
-    b.addEventListener('click', function () {
-      mode = b.getAttribute('data-alph');
-      try { localStorage.setItem(KEY, mode); } catch (e) {}
-      run();
-    });
+  var sw = document.getElementById('alph');
+  if (sw) sw.addEventListener('click', function () {
+    mode = mode === 'new' ? 'old' : 'new';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+    run();
   });
 
   run();

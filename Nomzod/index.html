@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preload" href="assets/fonts/AeonikPro-Regular.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="assets/fonts/AeonikPro-Bold.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=5">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Nomzod","url":"https://nmzd.uz","logo":"https://nmzd.uz/assets/favicon.png","description":"Rekruting va HR tizimlashtirish agentligi","sameAs": ["https://www.instagram.com/nomzod.agency", "https://t.me/ali_zairov"],
     "areaServed":{"@type":"City","name":"Toshkent"}}
@@ -44,10 +44,11 @@
       <a href="#ariza">Aloqa</a>
       <a class="btn btn--red nav__cta" href="#ariza">Ariza qoldirish</a>
     </nav>
-    <div class="alph" data-noconv role="group" aria-label="Alifbo">
-      <button type="button" class="alph__btn" data-alph="new" aria-pressed="true" title="Yangi alifbo">Yangi</button>
-      <button type="button" class="alph__btn" data-alph="old" aria-pressed="false" title="Eski alifbo">Eski</button>
-    </div>
+    <button type="button" class="alph" id="alph" data-noconv role="switch" aria-checked="true" aria-label="Yangi alifbo">
+      <span class="alph__thumb" aria-hidden="true"></span>
+      <span class="alph__opt alph__opt--new">Yangi</span>
+      <span class="alph__opt alph__opt--old">Eski</span>
+    </button>
     <a class="btn btn--red header__cta" href="#ariza">Ariza qoldirish</a>
     <button class="burger" data-noconv id="burger" aria-label="Menyuni ochish" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
   </div>
@@ -220,8 +221,8 @@
   <div class="container footer__bot">© 2026 Nomzod. nmzd.uz</div>
 </footer>
 
-<script src="assets/config.js"></script>
-<script src="assets/main.js"></script>
-<script src="assets/alphabet.js"></script>
+<script src="assets/config.js?v=5"></script>
+<script src="assets/main.js?v=5"></script>
+<script src="assets/alphabet.js?v=5"></script>
 </body>
 </html>
