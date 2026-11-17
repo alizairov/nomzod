@@ -249,3 +249,9 @@ html[data-alifbo=new] .header.menu-open .alph__opt--new,html[data-alifbo=old] .h
 @media(max-width:480px){.contact-card{flex-direction:column}.contact-card img{width:72px;height:72px}}
 .owner picture,.contact-card picture{flex:none;display:block;line-height:0}
 .owner picture img,.contact-card picture img{aspect-ratio:1/1;max-width:none}
+
+/* forma o'chirilgan paytdagi Telegram aloqa bo'limi */
+.form-wrap--tg{max-width:760px;margin:0 auto;display:block;text-align:left}
+.form-wrap--tg .contact-card{padding:28px;gap:24px}
+.form-wrap--tg .contact-card img{width:104px;height:104px}
+.form-wrap--tg .btn--tg{padding:16px 26px;font-size:1.05rem}

@@ -24,7 +24,7 @@
 <link rel="apple-touch-icon" href="assets/favicon.png">
 <link rel="preload" href="assets/fonts/AeonikPro-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/AeonikPro-Bold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=8">
+<link rel="stylesheet" href="assets/style.css?v=9">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Nomzod","url":"https://nmzd.uz","logo":"https://nmzd.uz/assets/favicon.png","description":"Rekruting va HR tizimlashtirish agentligi","sameAs": ["https://www.instagram.com/nomzod.agency", "https://t.me/ali_zairov"],
     "areaServed":{"@type":"City","name":"Toshkent"}}
@@ -42,14 +42,14 @@
       <a href="#jarayon">Qanday ishlaymiz</a>
       <a href="#biz-haqimizda">Biz haqimizda</a>
       <a href="#ariza">Aloqa</a>
-      <a class="btn btn--red nav__cta" href="#ariza">Ariza qoldirish</a>
+      <a class="btn btn--red nav__cta" href="#ariza">Bog'lanish</a>
     </nav>
     <button type="button" class="alph" id="alph" data-noconv role="switch" aria-checked="true" aria-label="Yangi alifbo">
       <span class="alph__thumb" aria-hidden="true"></span>
       <span class="alph__opt alph__opt--new">Yangi</span>
       <span class="alph__opt alph__opt--old">Eski</span>
     </button>
-    <a class="btn btn--red header__cta" href="#ariza">Ariza qoldirish</a>
+    <a class="btn btn--red header__cta" href="#ariza">Bog'lanish</a>
     <button class="burger" data-noconv id="burger" aria-label="Menyuni ochish" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
   </div>
 </header>
@@ -100,7 +100,7 @@
           <picture><source srcset="assets/ali.webp" type="image/webp"><img src="assets/ali.jpg" alt="Ali" width="48" height="48" loading="lazy"></picture>
           <p>Bu ishni men — Ali o'zim olib boraman: kompaniyangiz bilan tanishib, HR bo'limingizni boshidan oxirigacha birga tizimlashtiramiz.</p>
         </div>
-        <a class="btn btn--white" href="#ariza" data-service="HR tizimlashtirish">Ariza qoldirish</a>
+        <a class="btn btn--white" href="#ariza" data-service="HR tizimlashtirish">Bog'lanish</a>
       </article>
       <article class="card reveal">
         <span class="card__tag">02</span>
@@ -112,7 +112,7 @@
           <li>1 oy moslashuv davrida yoningizda turamiz</li>
           <li>3 oy ichida nomzod ketib qolsa, qo'shimcha to'lovsiz almashtirib beramiz</li>
         </ul>
-        <a class="btn btn--red" href="#ariza" data-service="Rekruting">Ariza qoldirish</a>
+        <a class="btn btn--red" href="#ariza" data-service="Rekruting">Bog'lanish</a>
       </article>
     </div>
   </div>
@@ -152,11 +152,11 @@
 </section>
 
 <section class="section" id="ariza">
-  <div class="container form-wrap">
+  <div class="container form-wrap form-wrap--tg">
     <div class="form-intro reveal">
       <p class="eyebrow">Aloqa</p>
       <h2>Bepul konsultatsiyaga yoziling</h2>
-      <p class="lead">Ma'lumotlaringizni qoldiring — 24 soat ichida bog'lanamiz.</p>
+      <p class="lead">Telegram orqali yozing — vaziyatingizni eshitib, qanday yordam bera olishimizni aytamiz.</p>
       <div class="contact-card">
         <picture><source srcset="assets/ali.webp" type="image/webp"><img src="assets/ali.jpg" alt="Ali" width="88" height="88" loading="lazy"></picture>
         <div>
@@ -166,7 +166,8 @@
         </div>
       </div>
     </div>
-    <div class="form-card reveal">
+    <!-- Ariza formasi vaqtincha o'chirilgan (keyin qayta yoqiladi: hidden ni olib tashlang) -->
+    <div class="form-card reveal" hidden>
       <form id="form" novalidate>
         <div class="field">
           <label for="f-name">Ismingiz <span aria-hidden="true">*</span></label>
@@ -221,8 +222,8 @@
   <div class="container footer__bot">© 2026 Nomzod. nmzd.uz</div>
 </footer>
 
-<script src="assets/config.js?v=8" defer></script>
-<script src="assets/main.js?v=8" defer></script>
-<script src="assets/alphabet.js?v=8" defer></script>
+<script src="assets/config.js?v=9" defer></script>
+<script src="assets/main.js?v=9" defer></script>
+<script src="assets/alphabet.js?v=9" defer></script>
 </body>
 </html>
