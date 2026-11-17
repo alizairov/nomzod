@@ -218,3 +218,14 @@ input[type=text]:focus,input[type=tel]:focus,textarea:focus{outline:none;border-
   .hero em{background-position:0 0}
   .btn::after{transition:none}
 }
+
+/* alifbo switch */
+.alph{display:inline-flex;flex:none;margin-left:auto;padding:3px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.06);transition:border-color .3s,background .3s}
+.alph__btn{border:0;background:none;color:rgba(255,255,255,.75);font:inherit;font-size:.8rem;font-weight:500;padding:5px 11px;border-radius:999px;cursor:pointer;transition:background .25s,color .25s}
+.alph__btn[aria-pressed=true]{background:#fff;color:var(--navy)}
+.header.is-stuck .alph,.header.menu-open .alph{border-color:var(--line);background:#F5F5F7}
+.header.is-stuck .alph__btn,.header.menu-open .alph__btn{color:#6b6d85}
+.header.is-stuck .alph__btn[aria-pressed=true],.header.menu-open .alph__btn[aria-pressed=true]{background:var(--navy);color:#fff}
+.alph__btn:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.alph + .header__cta + .burger{margin-left:0}
+@media(min-width:960px){.alph{margin-left:0}}
