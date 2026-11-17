@@ -229,3 +229,17 @@ input[type=text]:focus,input[type=tel]:focus,textarea:focus{outline:none;border-
 .alph__btn:focus-visible{outline:2px solid var(--red);outline-offset:2px}
 .alph + .header__cta + .burger{margin-left:0}
 @media(min-width:960px){.alph{margin-left:0}}
+
+/* Ali: HR kartadagi muallif va aloqa kartasi */
+.owner{display:flex;gap:14px;align-items:center;margin:4px 0 24px;padding:14px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.owner img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none;border:2px solid rgba(255,138,150,.6)}
+.owner p{margin:0;font-size:.93rem;line-height:1.45;color:#dcdcee}
+.contact-card{display:flex;gap:18px;align-items:flex-start;margin-top:32px;padding:22px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px -18px rgba(30,32,53,.35)}
+.contact-card img{width:88px;height:88px;border-radius:50%;object-fit:cover;flex:none}
+.contact-card__name{margin:0 0 4px;font-weight:700;font-size:1.15rem;color:var(--navy)}
+.contact-card__text{margin:0 0 14px;color:#4a4c66;line-height:1.5;font-size:.97rem}
+.btn--tg{background:linear-gradient(135deg,#2AABEE,#229ED9);color:#fff;gap:8px;display:inline-flex;align-items:center}
+.btn--tg:hover{filter:brightness(1.06)}
+@media(max-width:480px){.contact-card{flex-direction:column}.contact-card img{width:72px;height:72px}}
+.owner picture,.contact-card picture{flex:none;display:block;line-height:0}
+.owner picture img,.contact-card picture img{aspect-ratio:1/1;max-width:none}
