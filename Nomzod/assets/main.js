@@ -125,8 +125,10 @@
     btn.disabled = true; btn.classList.add('is-loading');
 
     if (!cfg.formEndpoint) {
-      console.warn('Nomzod: formEndpoint bo\'sh — demo rejim, ariza yuborilmadi. assets/config.js ni sozlang.');
-      setTimeout(showSuccess, 600);
+      // Forma hali ulanmagan: arizani yo'qotmaslik uchun Telegram'ga yo'naltiramiz
+      btn.disabled = false; btn.classList.remove('is-loading');
+      errBox.innerHTML = "Forma hozircha ishga tushirilmoqda. Iltimos, arizangizni <a href=\"https://t.me/ali_zairov\" target=\"_blank\" rel=\"noopener\">Telegram orqali</a> yuboring.";
+      errBox.hidden = false;
       return;
     }
 
